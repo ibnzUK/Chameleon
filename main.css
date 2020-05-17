@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+
+html {
+
+  background: url('images/background.svg') no-repeat center center fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 0;
+  background-size: cover;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  font-size: 1rem;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 9% 6% 77vw 1% 5%;
+  grid-template-rows: 13vh 80vh 2vh;
+  min-height: 50%;
+  grid-template-areas:
+    'headerl header header header headerr'
+    'side-l side-l main side-r side-r'
+    'footer footer footer footer footer';
+
+
+    background: url('images/background.svg') no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 0;
+    background-size: cover;
+    z-index: 1000;
+
+}
+.cordinates {
+  display: inline-block;
+  position: center;
+  text-align: center;
+  margin-top: 0.2rem  ;
+  grid-area: header;
+}
+
+
+.area-l {
+  background: rgba(50, 9, 235, 0.055);
+  grid-area: side-l;
+  height: 100%;     /* full height of the content box */
+  height: 100%;     /* full height of the content box */
+  min-height: 45em; /* Will be AT LEAST 20em tall */
+  max-height: 55em; /* Will be AT LEAST 20em tall */
+
+}
+
+.area-c {
+  background: rgba(92, 235, 9, 0.123);
+  grid-area: main;
+  display: grid;
+  grid-template-columns: 35% 25% 25%;
+  grid-template-rows: 50% 40% 10% 10%;
+
+  grid-template-areas:
+    'header header header'
+    'chead cbody cbody2'
+    'legs legs legs'
+    'legs legs legs';
+    height: 100%;     /* full height of the content box */
+    min-height: 45em; /* Will be AT LEAST 20em tall */
+    max-height: 55em; /* Will be AT LEAST 20em tall */
+    width: 100%;     /* full height of the content box */
+    min-width: 100rem; /* Will be AT LEAST 20em tall */
+    max-width: 200rem; /* Will be AT LEAST 20em tall */
+
+}
+
+.area-r {
+  background: rgba(235, 156, 9, 0.048);
+  grid-area: side-r;
+}
+
+.chead {
+  background: url('images/head.svg') no-repeat right;
+  /* grid-area: chead; */
+  grid-column-start: chead;
+  grid-row-start: 2;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+
+}
+
+.cbody {
+  background: rgba(9, 235, 28, 0.644);
+  background: url('images/body.svg') no-repeat center;
+  /* grid-area: chead / cbody; */
+  grid-column-start: chead;
+  grid-column-end: span 4;
+  grid-row-start: cbody;
+  grid-row-end: 4;
+  z-index: -1;
+
+
+}
+
+.clegs {
+  background: url('images/branch.svg') no-repeat ;
+  /* background: rgba(9, 235, 28, 0.644); */
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+  z-index: -2;
+  /* display: block; */
+  height: 100vh;
+  min-width: 100rem; 
+  max-width: 200rem;
+  width: 60vw;
+
+}
